@@ -1,19 +1,10 @@
 # Mexgoo
 
-**TODO: Add description**
+Text mode Magic the gathering game made in Elixir
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+This is mostly a for fun project I'm doing for practicing Elixir
 
-  1. Add mexgoo to your list of dependencies in `mix.exs`:
 
-        def deps do
-          [{:mexgoo, "~> 0.0.1"}]
-        end
 
-  2. Ensure mexgoo is started before your application:
-
-        def application do
-          [applications: [:mexgoo]]
-        end
