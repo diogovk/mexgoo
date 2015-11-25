@@ -1,8 +1,17 @@
 defmodule MexgooTest do
   use ExUnit.Case
   doctest Mexgoo
+  alias Mexgoo.Game
+  alias Mexgoo.Player
 
-  test "the truth" do
-    assert 1 + 1 == 2
+  setup do
+    { :ok, game } = Mexgoo.Game.start_link(%Player{ name: "Player1"}, %Player{ name: "Player2"} )
+    { :ok, game: game}
   end
+
+  test "Both players should start with 20 life each", %{game: game} do
+    players = Game.gamestate(game).players
+    assert [%Player{lifepoints: 20}, %Player{lifepoints: 20}] = players
+  end
+
 end
