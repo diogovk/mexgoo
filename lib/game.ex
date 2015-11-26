@@ -15,11 +15,11 @@ defmodule Mexgoo.Game do
     {:ok, %Gamestate{players: [player1, player2]}}
   end 
 
-  def gamestate(server) do
-    GenServer.call(server, :gamestate)
+  def state(server) do
+    GenServer.call(server, :state)
   end
 
-  def handle_call(:gamestate, _from, gamestate) do
-    {:reply, gamestate, gamestate}
+  def handle_call(:state, _from, state) do
+    {:reply, state, state}
   end
 end

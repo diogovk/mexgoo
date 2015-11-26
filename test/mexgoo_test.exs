@@ -10,7 +10,7 @@ defmodule MexgooTest do
   end
 
   test "Both players should start with 20 life each", %{game: game} do
-    players = Game.gamestate(game).players
+    players = Game.state(game).players
     assert [%Player{lifepoints: 20}, %Player{lifepoints: 20}] = players
   end
 
