@@ -19,4 +19,11 @@ defmodule MexgooTest do
     game |> Game.update_player(0, &(%{ &1 | life: 0 }))
     assert %Player{life: 0} = game |> Game.player(0)
   end
+
+  #test "The game should end when one of the players has less than 20 life", %{game: game} do
+  #  ended? = game |> Game.state |> Map.get(:ended?)
+  #  assert ended? == false
+  #  player1 = game |> Game.update_player(1, ) |> Map.put(:lifepoints, 0) |> Game.update_player
+  #  Game.set_lifetotal(
+  #end
 end
