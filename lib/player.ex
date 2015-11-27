@@ -1,5 +1,5 @@
 
 defmodule Mexgoo.Player do
-  defstruct name: "Unamed Player", lifepoints: 20
+  defstruct name: "Unamed Player", life: 20
   
 end
