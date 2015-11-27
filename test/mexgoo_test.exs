@@ -14,4 +14,9 @@ defmodule MexgooTest do
     assert [%Player{lifepoints: 20}, %Player{lifepoints: 20}] = players
   end
 
+  test "Should allow player update", %{game: game} do
+    assert %Player{lifepoints: 20} = game |> Game.player(0)
+    game |> Game.update_player(0, &(%{ &1 | lifepoints: 0 }))
+    assert %Player{lifepoints: 0} = game |> Game.player(0)
+  end
 end
